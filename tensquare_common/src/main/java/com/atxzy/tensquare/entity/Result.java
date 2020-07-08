@@ -3,7 +3,7 @@ package com.atxzy.tensquare.entity;
 /**
  * 返回结果实体类
  */
-public class Result {
+public class Result<T> {
 
     private boolean flag; //判断是否成功
 
@@ -14,6 +14,12 @@ public class Result {
     private Object data;//返回数据
 
     public Result() {
+    }
+
+    public Result(boolean flag, Integer code, String message) {
+        this.flag = flag;
+        this.code = code;
+        this.message = message;
     }
 
     public Result(boolean flag, Integer code, String message, Object data) {
