@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.util.Objects;
+
 /**
  * gathering实体类
  * @author Administrator
@@ -33,7 +35,13 @@ public class Gathering implements Serializable{
 	private String state;//是否可见
 	private String city;//城市
 
-	
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, name, summary, detail, sponsor, image, starttime, endtime, address, enrolltime, state, city);
+	}
+
 	public String getId() {
 		return id;
 	}

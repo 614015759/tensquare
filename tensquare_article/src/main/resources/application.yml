@@ -15,3 +15,8 @@ spring:
 
   redis:
     host: 39.99.136.0
+  data:
+    mongodb:
+      host: 39.99.136.0
+      database: recruitdb
+

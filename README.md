@@ -11,7 +11,11 @@ qa  9004  问答
 
 article 9005 文章
 
-gathering 9006 活动
+gathering 9006 活动（Redis/Cache）
+
+spit  9007  吐槽（MongoDB）
+
+search:  9008 全文搜索elasticsearch
 
 jpa的条件查询真麻烦
 
