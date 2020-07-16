@@ -1,9 +1,0 @@
-server:
-  port: 9007
-spring:
-  application:
-    name: tensquare-spit
-  data:
-    mongodb:
-      host: 39.99.136.0
-      database: spitdb

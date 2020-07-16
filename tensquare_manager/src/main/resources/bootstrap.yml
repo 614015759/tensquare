@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      name: manager
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        service-id: tensquare-config
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6869/eureka

@@ -1,11 +1,14 @@
 package com.atxzy.tensquare.pojo;
 
+import org.hibernate.annotations.Proxy;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_label")
+@Proxy(lazy = false)
 public class Label {
 
     @Id

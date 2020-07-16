@@ -1,0 +1,8 @@
+server:
+  port: 8098
+spring:
+  rabbitmq:
+    host: 39.99.136.0
+    username: guest
+    password: guest
+

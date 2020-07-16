@@ -2,10 +2,12 @@ package com.atxzy.tensquare.controller;
 import java.util.List;
 import java.util.Map;
 
+import com.atxzy.tensquare.client.LabelClient;
 import com.atxzy.tensquare.entity.PageResult;
 import com.atxzy.tensquare.entity.Result;
 import com.atxzy.tensquare.entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,6 +32,18 @@ public class ProblemController {
 
 	@Autowired
 	private ProblemService problemService;
+
+	@Autowired
+	private LabelClient labelClient;
+
+	/**
+	 * 使用base层的getById方法
+	 */
+	@RequestMapping(value = "/label/{labelId}",method = RequestMethod.GET)
+	public Result findLabelById(@PathVariable String labelId){
+		Result byId = labelClient.findById(labelId);
+		return byId;
+	}
 
 	/**
 	 * 根据id查询正在等待被回答的问题列表
